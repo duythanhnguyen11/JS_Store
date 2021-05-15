@@ -7,6 +7,9 @@ var chitietsanpham = require('./Controller/ChitietsanphamController');
 var about = require('./Controller/AboutController');
 var checkout = require('./Controller/CheckoutController');
 var contact = require('./Controller/ContactController');
+var login = require('./Controller/LoginController');
+var signup = require('./Controller/SignupController');
+var cart = require('./Controller/CartController');
 
 var app = express();
 
@@ -24,3 +27,6 @@ app.use('/chitietsanpham', chitietsanpham);
 app.use('/about', about);
 app.use('/checkout', checkout);
 app.use('/contact', contact);
+app.use('/login', login);
+app.use('/signup', signup);
+app.use('/cart', cart);
