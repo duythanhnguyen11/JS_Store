@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var trangchu = require('./Controller/HomeController');
 var loaisanpham = require('./Controller/LoaisanphamController');
 var chitietsanpham = require('./Controller/ChitietsanphamController');
+var about = require('./Controller/AboutController');
+var checkout = require('./Controller/CheckoutController');
+var contact = require('./Controller/ContactController');
 
 var app = express();
 
@@ -18,3 +21,6 @@ app.listen(3000, ()=>{
 app.use('/trang-chu', trangchu);
 app.use('/loaisanpham', loaisanpham);   
 app.use('/chitietsanpham', chitietsanpham);
+app.use('/about', about);
+app.use('/checkout', checkout);
+app.use('/contact', contact);
