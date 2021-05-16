@@ -7,5 +7,6 @@ exports.getSlider = async()=>{
     await client.connect();
     var db = client.db('shop_cake');
     var arr = await db.collection('Slider').find().toArray();
+    //console.log(arr);
     return arr;
 }

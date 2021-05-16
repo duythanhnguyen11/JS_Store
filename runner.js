@@ -10,6 +10,7 @@ var contact = require('./Controller/ContactController');
 var login = require('./Controller/LoginController');
 var signup = require('./Controller/SignupController');
 var cart = require('./Controller/CartController');
+var product = require('./Controller/ChitietsanphamController');
 
 var app = express();
 
@@ -30,3 +31,4 @@ app.use('/contact', contact);
 app.use('/login', login);
 app.use('/signup', signup);
 app.use('/cart', cart);
+app.use('/sanpham', product);
