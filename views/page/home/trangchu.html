@@ -1,4 +1,5 @@
 {%extends 'shared/master.html'%}
+{%block title%}Trang chủ{%endblock%}
 {%block body%}
 <div class="fullwidthbanner-container">
     <div class="fullwidthbanner">
@@ -67,7 +68,15 @@
                             </div>
                         {%endfor%}
                         </div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <ul class="pagination">
+                                {%for i in range(1, page +1)%}
+                                    <li class="page-item">
+                                        <a class="page-link" href="/trangchu/{{i}}">{{i}}</a>
+                                    </li>
+                                {%endfor%}
+                            </ul>
+                        </div>
                     </div> <!-- .beta-products-list -->
 
                     <div class="space50">&nbsp;</div>
@@ -82,6 +91,7 @@
                         {%for product_km in product_km%}
                             <div class="col-sm-3">
                                 <div class="single-item">
+                                    <div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
                                     <div class="single-item-header">
                                         <a href="#"><img src="/image/product/{{product_km['image']}}" alt="" height="250px"></a>
                                     </div>
@@ -101,7 +111,15 @@
                             </div>
                         {%endfor%}
                         </div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <ul class="pagination">
+                                {%for i in range(1, page_n +1)%}
+                                    <li class="page-item">
+                                        <a class="page-link" href="/trangchu/{{i}}">{{i}}</a>
+                                    </li>
+                                {%endfor%}
+                            </ul>
+                        </div>
                     </div> <!-- .beta-products-list -->
                 </div>
             </div> <!-- end section with sidebar and main content -->
@@ -109,5 +127,7 @@
 
         </div> <!-- .main-content -->
     </div> <!-- #content -->
-</div> <!-- .container -->    
+<script>
+    $($('.pagination>li.page-item')[{{p-1}}]).addClass('active');
+</script>
 {%endblock%}

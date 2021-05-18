@@ -18,11 +18,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('static'));
 nunjucks.configure('views', {express: app});
 
-app.listen(3000, ()=>{
-    console.log('Listen port 3000');
+app.listen(4000, ()=>{
+    console.log('Listen port 4000');
 });
 
-app.use('/trang-chu', trangchu);
+app.use('/trangchu', trangchu);
 app.use('/loaisanpham', loaisanpham);   
 app.use('/chitietsanpham', chitietsanpham);
 app.use('/about', about);
